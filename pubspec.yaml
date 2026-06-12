@@ -1,0 +1,39 @@
+name: media_metadata
+description: A Flutter plugin to read metadata from media files (mp3, mp4, mkv, 3gp, mov, aac) on Android, iOS, macOS, Windows, and Linux.
+version: 1.0.1
+homepage: https://github.com/Noamcreator/media_metadata
+repository: https://github.com/Noamcreator/media_metadata
+issue_tracker: https://github.com/Noamcreator/media_metadata/issues
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.1.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: me.noam.media_metadata
+        pluginClass: MediaMetadataPlugin
+      ios:
+        pluginClass: MediaMetadataPlugin
+        swiftPackageManager: true
+      linux:
+        pluginClass: MediaMetadataPlugin
+      macos:
+        pluginClass: MediaMetadataPlugin
+        swiftPackageManager: true
+      windows:
+        pluginClass: MediaMetadataPluginCApi
